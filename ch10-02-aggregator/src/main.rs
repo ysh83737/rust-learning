@@ -1,4 +1,4 @@
-use ch10_02_aggregator::{NewsArticle, Summary, Tweet};
+use ch10_02_aggregator::{NewsArticle, Summary, Tweet, notify};
 
 fn main() {
     let today_news = NewsArticle {
@@ -8,6 +8,7 @@ fn main() {
         content: String::from("CCCCCCCCCCCCCC"),
     };
     println!("Tody New: 《{}》", today_news.summarize());
+    notify(&today_news);
 
     let tweet = Tweet {
         username: String::from("Shawn"),
@@ -17,4 +18,5 @@ fn main() {
     };
 
     println!("Hot tweet: 《{}》", tweet.summarize());
+    notify(&tweet);
 }
