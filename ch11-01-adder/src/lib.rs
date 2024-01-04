@@ -24,7 +24,8 @@ mod tests {
 
     #[test]
     fn another_fail() {
-        assert_eq!(add(3, 3), 7);
+        let result = add(3, 3);
+        assert_eq!(result, 7, "{} is not equal to 7", result);
     }
 
     #[test]
