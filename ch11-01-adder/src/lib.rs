@@ -21,4 +21,14 @@ mod tests {
     fn another() {
         panic!("Make this test fail!");
     }
+
+    #[test]
+    fn another_fail() {
+        assert_eq!(add(3, 3), 7);
+    }
+
+    #[test]
+    fn wrong_result() {
+        assert_ne!(add(3, 3), 7);
+    }
 }
