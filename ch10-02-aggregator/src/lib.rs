@@ -76,3 +76,12 @@ where
 {
     1111
 }
+
+pub fn returns_summarizable() -> impl Summary {
+    Tweet {
+        username: String::from("Shawn"),
+        content: String::from("CCCCCCCCCCCCCC"),
+        reply: false,
+        retweet: true
+    }
+}

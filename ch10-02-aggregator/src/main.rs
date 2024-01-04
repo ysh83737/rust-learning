@@ -1,4 +1,4 @@
-use ch10_02_aggregator::{NewsArticle, Summary, Tweet, notify, notify1, notify2};
+use ch10_02_aggregator::{NewsArticle, Summary, Tweet, notify, notify1, notify2, returns_summarizable};
 
 fn main() {
     let today_news = NewsArticle {
@@ -23,4 +23,7 @@ fn main() {
     notify1(&today_news, &tweet);
     // notify2(&today_news, &tweet);
     notify2(&today_news, &today_news);
+
+    let tweet = returns_summarizable();
+    println!("Hot tweet: 《{}》", tweet.summarize());
 }
