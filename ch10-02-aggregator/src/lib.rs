@@ -1,4 +1,4 @@
-use std::fmt::Display;
+use std::fmt::{Display, Debug};
 
 pub trait Summary {
     fn summarize_author(&self) -> String;
@@ -63,4 +63,16 @@ pub fn notify3(item: &(impl Summary + Display)) {
 pub fn notify4<T: Summary + Display>(item: &T) {
     println!("Breaking news! {}", item.summarize());
     println!("Display {}", item);
+}
+
+pub fn func1<T: Clone + Display, U: Clone + Debug>(t: &T, u: &U) -> i32 {
+    1111
+}
+
+pub fn func2<T, U>(t: &T, u: &U) -> i32
+where
+    T: Clone + Display,
+    U: Clone + Debug,
+{
+    1111
 }
