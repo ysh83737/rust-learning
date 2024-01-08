@@ -2,8 +2,11 @@ use std::error::Error;
 use std::fs;
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
-  let content = fs::read_to_string(config.file_path)?;
-  println!("With text:\n{}", content);
+  let contents = fs::read_to_string(config.file_path)?;
+
+  for line in search(&config.query, &contents) {
+    print!("{line}");
+  }
 
   Ok(())
 }
