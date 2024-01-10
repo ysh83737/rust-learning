@@ -12,4 +12,19 @@ fn main() {
     println!("Before calling closure: {:?}", list);
     only_borrows();
     println!("After calling closure: {:?}", list);
+
+
+    let mut list = vec![1, 2, 3];
+    println!("Before defining closure: {:?}", list);
+
+    let mut borrow_mutably = || {
+        list.push(4);
+        println!("From closure: {:?}", list);
+    };
+
+    // immutable borrow
+    // println!("From closure: {:?}", list);
+
+    borrow_mutably();
+    println!("After calling closure: {:?}", list);
 }
