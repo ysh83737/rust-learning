@@ -14,12 +14,11 @@ fn main() {
     // list.sort_by_key(|r| r.width);
     // println!("{:#?}", list);
 
-    let mut sort_operations = vec![];
-    let value = String::from("by key called");
+    let mut num_sort_operations = 0;
 
     list.sort_by_key(|r| {
-        sort_operations.push(value);
+        num_sort_operations += 1;
         r.width
     });
-    println!("{:#?}", list);
+    println!("{:#?}, sorted in {num_sort_operations} operations", list);
 }
