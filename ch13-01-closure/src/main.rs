@@ -1,3 +1,5 @@
+use std::thread;
+
 fn main() {
     // let example_closure = |x| x;
 
@@ -27,4 +29,14 @@ fn main() {
 
     borrow_mutably();
     println!("After calling closure: {:?}", list);
+
+
+    let list = vec![1, 2, 3];
+    println!("Before defining closure: {:?}", list);
+
+    thread::spawn(move || println!("From closure: {:?}", list))
+        .join()
+        .unwrap();
+
+    // println!("After calling closure: {:?}", list);
 }
