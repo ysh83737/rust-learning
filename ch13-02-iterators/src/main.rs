@@ -27,4 +27,10 @@ fn main() {
 
     // println!("v1_iter = {:?}", v1_iter);
     println!("total={}", total);
+
+
+    let v1_iter = v1.iter();
+    let m2 = v1_iter.map(|x| x + 1);
+    let v2: Vec<i32> = m2.collect();
+    println!("v2 = {:?}", v2);
 }
