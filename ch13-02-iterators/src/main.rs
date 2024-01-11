@@ -9,8 +9,15 @@ fn main() {
     // v1_iter moved
     // println!("v1_iter = {:#?}", v1_iter);
 
+    println!("v1_iter = {:?}", v1_iter);
     println!("Next: {:?}", v1_iter.next());
+    println!("v1_iter = {:?}", v1_iter);
     println!("Next: {:?}", v1_iter.next());
+    println!("v1_iter = {:?}", v1_iter);
     println!("Next: {:?}", v1_iter.next());
+    println!("v1_iter = {:?}", v1_iter);
     println!("Next: {:?}", v1_iter.next());
+    println!("v1_iter = {:?}", v1_iter);
+
+    println!("v1 = {:?}", v1);
 }
