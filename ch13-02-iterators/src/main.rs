@@ -20,4 +20,11 @@ fn main() {
     println!("v1_iter = {:?}", v1_iter);
 
     println!("v1 = {:?}", v1);
+
+
+    let v1_iter = v1.iter();
+    let total: i32 = v1_iter.sum();
+
+    // println!("v1_iter = {:?}", v1_iter);
+    println!("total={}", total);
 }
