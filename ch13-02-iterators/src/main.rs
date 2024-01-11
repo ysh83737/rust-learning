@@ -5,4 +5,7 @@ fn main() {
     for item in v1_iter {
         println!("Got: {}", item);
     }
+
+    // v1_iter moved
+    // println!("v1_iter = {:#?}", v1_iter);
 }
