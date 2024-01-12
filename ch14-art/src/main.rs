@@ -1,5 +1,4 @@
-use ch14_art::kinds::PrimaryColor;
-use ch14_art::utils::mix;
+use ch14_art::{ PrimaryColor, mix };
 
 fn main() {
   let red = PrimaryColor::Red;
