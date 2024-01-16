@@ -21,4 +21,11 @@ fn main() {
     let y = MyBox::new(x);
 
     assert_eq!(*y, 5);
+
+    let name = MyBox::new(String::from("Rust"));
+    hello(&name);
+}
+
+fn hello(name: &str) {
+    println!("Hello, {}", name);
 }
