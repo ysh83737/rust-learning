@@ -1,3 +1,5 @@
+use std::mem::drop;
+
 struct CustomSmartPointer {
     data: String,
 }
@@ -9,7 +11,7 @@ impl Drop for CustomSmartPointer {
 }
 
 fn main() {
-    let customSmartPointer1 = CustomSmartPointer {
+    let mut customSmartPointer1 = CustomSmartPointer {
         data: String::from("my stuff"),
     };
 
@@ -18,4 +20,6 @@ fn main() {
     };
 
     println!("CustomSmartPointers is created!");
+    drop(customSmartPointer1);
+    println!("CustomSmartPointer dropped before the end of main.");
 }
