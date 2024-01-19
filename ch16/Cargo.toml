@@ -2,4 +2,5 @@
 
 members = [
   "spawn",
+  "spawn_move",
 ]
