@@ -11,6 +11,6 @@ fn main() {
 
     for i in 1..5 {
         println!("Hi, number {} from main thread.", i);
-        thread::sleep(Duration::from_millis(1));
+        thread::sleep(Duration::from_millis(5));
     }
 }
