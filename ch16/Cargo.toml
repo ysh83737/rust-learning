@@ -3,4 +3,5 @@
 members = [
   "spawn",
   "spawn_move",
+  "message-passing",
 ]
