@@ -4,5 +4,6 @@ members = [
   "spawn",
   "spawn_move",
   "message-passing",
-  "multiple-transmitter"
+  "multiple-transmitter",
+  "mutex",
 ]
