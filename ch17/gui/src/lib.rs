@@ -1,15 +1,5 @@
-pub trait Draw {
-    fn draw(&self);
-}
+mod screen;
+mod components;
 
-pub struct Screen {
-    pub components: Vec<Box<dyn Draw>>,
-}
-
-impl Screen {
-    pub fn run(&self) {
-        for component in self.components.iter() {
-            component.draw();
-        }
-    }
-}
+pub use crate::screen::screen::{ Draw, Screen };
+pub use crate::components::{ Button, TextField, SelectBox };
