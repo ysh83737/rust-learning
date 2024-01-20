@@ -1,5 +1,4 @@
-use std::rc::Rc;
-use std::sync::Mutex;
+use std::sync::{ Arc, Mutex };
 use std::thread;
 
 fn main() {
@@ -14,11 +13,11 @@ fn main() {
 
     println!("m = {:?}", m);
 
-    let counter = Rc::new(Mutex::new(0));
+    let counter = Arc::new(Mutex::new(0));
     let mut handlers = vec![];
 
-    for i in 0..10 {
-        let counter = Rc::clone(&counter);
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
         let handler = thread::spawn(move || {
             let mut num = counter.lock().unwrap();
             *num += 1;
