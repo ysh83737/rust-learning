@@ -8,7 +8,7 @@ pub mod button {
     }
     impl Draw for Button {
         fn draw(&self) {
-            // ...
+            println!("Draw TextField: width={}, height={}, label={}", self.width, self.height, self.label);
         }
     }
 }

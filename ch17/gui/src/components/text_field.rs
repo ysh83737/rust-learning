@@ -8,7 +8,7 @@ pub mod text_filed {
     }
     impl Draw for TextField {
         fn draw(&self) {
-            // ...
+            println!("Draw TextField: width={}, height={}, placeholder={}", self.width, self.height, self.placeholder);
         }
     }
 }

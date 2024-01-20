@@ -9,7 +9,7 @@ pub mod select_box {
     }
     impl Draw for SelectBox {
         fn draw(&self) {
-            // ...
+            println!("Draw TextField: width={}, height={}, placeholder={}, options={:?}", self.width, self.height, self.placeholder, self.options);
         }
     }
 }

@@ -7,7 +7,7 @@ struct Image {
 }
 impl Draw for Image {
     fn draw(&self) {
-        // ...
+        println!("Draw TextField: width={}, height={}, src={}", self.width, self.height, self.src);
     }
 }
 
