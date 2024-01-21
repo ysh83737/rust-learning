@@ -3,4 +3,5 @@
 members = [
   "averaged_collection",
   "gui",
+  "blog",
 ]
