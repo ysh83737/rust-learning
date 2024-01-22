@@ -5,6 +5,9 @@ trait State {
     fn content<'a>(&self, _post: &'a Post) -> &'a str {
         ""
     }
+    fn add_text<'a>(&self, _text: &'a str) -> &'a str {
+        ""
+    }
 }
 
 struct Draft {}
@@ -17,6 +20,9 @@ impl State for Draft {
     }
     fn approve(self: Box<Self>) -> Box<dyn State> {
         self
+    }
+    fn add_text<'a>(&self, text: &'a str) -> &'a str {
+        text
     }
 }
 
@@ -75,7 +81,7 @@ impl Post {
     }
 
     pub fn add_text(&mut self, text: &str) {
-        self.content.push_str(text);
+        self.content.push_str(self.state.as_ref().unwrap().add_text(text));
     }
 
     pub fn content(&self) -> &str {
