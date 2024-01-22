@@ -14,5 +14,13 @@ fn main() {
 
     post.request_review();
     post.approve();
+    assert_eq!("", post.content());
+    
+    post.reject();
+    assert_eq!("", post.content());
+
+    post.request_review();
+    post.approve();
+    post.approve();
     assert_eq!("I ate a salad for lunch today", post.content());
 }
