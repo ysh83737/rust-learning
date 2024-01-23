@@ -64,6 +64,9 @@ fn main() {
         Message::ChangeColor(Color::Rgb(r, g, b)) => println!("Change the color to red {r}, green {g}, and blue {b}"),
         Message::ChangeColor(Color::Hsv(h, s, v)) => println!("Change color to hue {h}, saturation {s}, value {v}"),
     }
+
+    let ((a, b), Point { x, y }) = ((3, 2), Point { x: 4, y: 5 });
+    println!("a={a}, b={b}, x={x}, y={y}");
 }
 
 struct Point {
