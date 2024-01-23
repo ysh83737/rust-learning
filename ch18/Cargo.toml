@@ -6,4 +6,5 @@ members = [
   "for-loop",
   "pattern",
   "match-guard",
+  "bindings"
 ]
