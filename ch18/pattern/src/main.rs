@@ -6,6 +6,11 @@ fn main() {
         3 => println!("three"),
         _ => println!("anything"),
     }
+    match x {
+        1 | 2 => println!("one or two"),
+        3 => println!("three"),
+        _ => println!("anything"),
+    }
 
     let x = Some(5);
     let y = 10;
