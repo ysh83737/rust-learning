@@ -4,4 +4,5 @@ members = [
   "if-let",
   "while-let",
   "for-loop",
+  "pattern",
 ]
