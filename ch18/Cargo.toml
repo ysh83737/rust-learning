@@ -2,4 +2,5 @@
 
 members = [
   "if-let",
+  "while-let",
 ]
