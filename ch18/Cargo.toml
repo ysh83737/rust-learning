@@ -5,4 +5,5 @@ members = [
   "while-let",
   "for-loop",
   "pattern",
+  "match-guard",
 ]

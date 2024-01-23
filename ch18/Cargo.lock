@@ -11,6 +11,10 @@ name = "if-let"
 version = "0.1.0"
 
 [[package]]
+name = "match-guard"
+version = "0.1.0"
+
+[[package]]
 name = "pattern"
 version = "0.1.0"
 
