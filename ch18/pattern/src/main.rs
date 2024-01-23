@@ -93,6 +93,18 @@ fn main() {
         println!("found a string");
     }
     println!("s = {:?}", s);
+
+    let p = Point {
+        x: 1,
+        y: 2,
+    };
+
+    match p {
+        Point { x, .. } => println!("x = {}", x),
+    }
+
+    let (one, .., five) = numbers;
+    println!("one = {}, five = {}", one, five);
 }
 
 struct Point {
