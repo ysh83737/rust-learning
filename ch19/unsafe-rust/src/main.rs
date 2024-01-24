@@ -9,5 +9,10 @@ fn main() {
     unsafe {
         println!("r1 = {}", *r1);
         println!("r2 = {}", *r2);
+        dangerous();
     }
+}
+
+unsafe fn dangerous() {
+    println!("dangerous fn");
 }
