@@ -2,5 +2,6 @@
 
 members = [
   "unsafe-rust",
-  "external-code"
+  "external-code",
+  "static-var"
 ]

@@ -7,5 +7,9 @@ name = "external-code"
 version = "0.1.0"
 
 [[package]]
+name = "static-var"
+version = "0.1.0"
+
+[[package]]
 name = "unsafe-rust"
 version = "0.1.0"
