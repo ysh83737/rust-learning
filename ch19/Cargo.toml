@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-  "unsafe-rust"
+  "unsafe-rust",
+  "external-code"
 ]
