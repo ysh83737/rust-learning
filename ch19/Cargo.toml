@@ -7,4 +7,5 @@ members = [
   "add-trait",
   "same-name-method",
   "super-trait",
+  "newtype",
 ]
