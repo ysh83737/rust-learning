@@ -23,13 +23,18 @@ fn main() {
     );
 
     assert_eq!(
-        Millimeters(345) + Meters(1),
+        Millimeters(345) + Meters(1.0),
         Millimeters(1345),
+    );
+
+    assert_eq!(
+        Meters(1.0) + Millimeters(345),
+        Meters(1.345),
     );
 }
 
 #[derive(Debug, PartialEq)]
-struct Meters(u32);
+struct Meters(f64);
 #[derive(Debug, PartialEq)]
 struct Millimeters(u32);
 
@@ -37,7 +42,14 @@ impl Add<Meters> for Millimeters {
     type Output = Millimeters;
 
     fn add(self, other: Meters) -> Self::Output {
-        Millimeters(self.0 + other.0 * 1000)
+        Millimeters(self.0 + other.0 as u32 * 1000)
     }
 }
 
+impl Add<Millimeters> for Meters {
+    type Output = Meters;
+
+    fn add(self, rhs: Millimeters) -> Self::Output {
+        Meters(self.0 + rhs.0 as f64 / 1000 as f64)
+    }
+}
