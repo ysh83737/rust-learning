@@ -5,4 +5,5 @@ members = [
   "external-code",
   "static-var",
   "add-trait",
+  "same-name-method",
 ]
