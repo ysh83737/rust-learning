@@ -6,4 +6,5 @@ members = [
   "static-var",
   "add-trait",
   "same-name-method",
+  "super-trait",
 ]
