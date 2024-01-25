@@ -3,6 +3,10 @@
 version = 3
 
 [[package]]
+name = "add-trait"
+version = "0.1.0"
+
+[[package]]
 name = "external-code"
 version = "0.1.0"
 

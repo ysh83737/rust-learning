@@ -3,5 +3,6 @@
 members = [
   "unsafe-rust",
   "external-code",
-  "static-var"
+  "static-var",
+  "add-trait",
 ]
