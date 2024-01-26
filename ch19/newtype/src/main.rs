@@ -22,4 +22,22 @@ fn main() {
     let y: Kilometers = 6;
 
     println!("x + y = {}", x + y);
+
+    let f: Thunk = Box::new(|| println!("hi"));
+
+    take_long_type(f);
+
+    let f = return_long_type();
+
+    take_long_type(f)
+}
+
+type Thunk = Box<dyn Fn() + Send + 'static>;
+
+fn take_long_type(f: Thunk) {
+    f();
+}
+
+fn return_long_type() -> Thunk {
+    Box::new(|| println!("hello"))
 }
