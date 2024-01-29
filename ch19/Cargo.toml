@@ -8,4 +8,5 @@ members = [
   "same-name-method",
   "super-trait",
   "newtype",
+  "function-pointer",
 ]

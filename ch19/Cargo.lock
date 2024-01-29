@@ -11,6 +11,10 @@ name = "external-code"
 version = "0.1.0"
 
 [[package]]
+name = "function-pointer"
+version = "0.1.0"
+
+[[package]]
 name = "newtype"
 version = "0.1.0"
 
